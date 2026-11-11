@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f9;
+    display: flex;
+}
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    background: #172554;
+    color: white;
+    padding: 25px 15px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+    font-size: 21px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 7px;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+.main {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    padding: 30px;
+}
+
+header {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+header p {
+    color: #64748b;
+    margin-top: 8px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 150px;
+    background: #dbeafe;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 30px;
+    color: #1d4ed8;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+button {
+    padding: 12px 18px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #172554;
+    color: white;
+}
+
+.present {
+    background: #16a34a;
+}
+
+.absent {
+    background: #dc2626;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+@media(max-width: 700px) {
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form {
+        display: block;
+    }
+
+    .form input {
+        width: 95%;
+    }
+}
