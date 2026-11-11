@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🎓 College Portal</h2>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#students">Students</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#reports">Reports</a>
+</div>
+
+<div class="main">
+    <header>
+        <h1>College Attendance Management</h1>
+        <p>Welcome, Teacher!</p>
+    </header>
+
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="total">0</p>
+            </div>
+            <div class="card">
+                <h3>Present</h3>
+                <p id="presentCount">0</p>
+            </div>
+            <div class="card">
+                <h3>Absent</h3>
+                <p id="absentCount">0</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="students">
+        <h2>Add Student</h2>
+        <div class="form">
+            <input type="text" id="roll" placeholder="Roll Number">
+            <input type="text" id="name" placeholder="Student Name">
+            <input type="text" id="course" placeholder="Course / Branch">
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+    </section>
+
+    <section id="attendance">
+        <h2>Mark Attendance</h2>
+        <input type="date" id="date">
+        <input type="text" id="search" placeholder="Search student..."
+               oninput="renderStudents()">
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Attendance</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="reports">
+        <h2>Attendance Reports</h2>
+        <button onclick="showReport()">Generate Report</button>
+        <div id="report"></div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
